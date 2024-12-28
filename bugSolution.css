@@ -1,0 +1,21 @@
+/*bug.css*/
+.element {
+  width: calc(100px + 50px); /* Missing space */
+  height: calc(100%+50%);/* Missing space */
+  margin: calc(10px-5px);/* Missing space */
+  padding: calc(100px+50%); /* Unit mismatch */
+  font-size: calc(10px*2x);/* Invalid Operator */
+  border: calc(1px + (1px +1px));/* Parenthesis error */
+  max-width: calc(100% + 100px) + 10%; /* Incorrect unit combination */
+}
+
+/*bugSolution.css*/
+.element {
+  width: calc(100px + 50px); /* Correct */
+  height: calc(100% + 50%); /* Correct */
+  margin: calc(10px - 5px); /* Correct */
+  padding: calc(100px + 50px); /* Correct, consistent unit */
+  font-size: calc(10px * 2); /* Correct Operator */
+  border: calc(1px + (1px + 1px)); /* Correct */
+  max-width: calc(100% + 100px); /* Correct */
+}
